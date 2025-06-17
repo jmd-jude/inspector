@@ -1,0 +1,21 @@
+{
+  "name": "AI Pre-Med Counselor",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "forwardPorts": [6274, 6277, 8080],
+  "portsAttributes": {
+    "6274": {"label": "MCP Inspector UI"},
+    "6277": {"label": "MCP Proxy Server"},
+    "8080": {"label": "Chat Interface"}
+  },
+  "postCreateCommand": "npm install && npm run build",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.vscode-typescript-next"]
+    }
+  }
+}
