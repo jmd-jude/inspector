@@ -1,0 +1,221 @@
+name: low-stats-strategy
+description: Maximize your medical school chances despite lower GPA or MCAT scores
+arguments:
+  - name: gpa
+    description: Your current GPA
+    required: true
+  - name: mcat_score
+    description: Your MCAT score (or target/expected score)
+    required: true
+  - name: upward_trend
+    description: Is there an upward grade trend in recent semesters?
+    required: false
+  - name: extenuating_circumstances
+    description: Any significant challenges that affected your academic performance
+    required: false
+  - name: strengths
+    description: Your strongest application components (research, clinical experience, etc.)
+    required: false
+
+template: |
+  # 💪 **Maximizing Your Medical School Chances**
+  *Your stats don't define your potential as a physician*
+  
+  ---
+  
+  ## 📊 **Your Academic Profile**
+  
+  **Current Statistics:**
+  - **GPA:** {{gpa}}
+  - **MCAT Score:** {{mcat_score}}
+  - **Grade Trend:** {{upward_trend || "Not specified - we'll address this"}}
+  - **Circumstances:** {{extenuating_circumstances || "Standard academic journey"}}
+  - **Strongest Assets:** {{strengths || "We'll identify your superpowers"}}
+  
+  ---
+  
+  ## 🎯 **Strategic Compensation Framework**
+  
+  ### **🏆 The "Holistic Review" Advantage**
+  Many medical schools use holistic review, meaning your stats are just ONE part of the equation. Here's how to maximize the other components:
+  
+  **Your Competitive Edge Strategy:**
+  - Transform perceived weaknesses into strength narratives
+  - Leverage unique experiences that numbers can't capture
+  - Demonstrate growth mindset and resilience
+  - Show exceptional commitment to medicine despite obstacles
+  
+  ---
+  
+  ## 🏫 **Smart School Selection Strategy**
+  
+  ### **🎯 Target Schools That Value Your Profile**
+  
+  **DO Schools (Osteopathic Medicine):**
+  - Often more holistic in admissions approach
+  - Value life experience and non-traditional paths
+  - Equally valid pathway to becoming a physician
+  - Consider both MD and DO for maximum opportunities
+  
+  **State Schools with In-State Advantage:**
+  - Leverage your residency status maximally
+  - Often have lower stat requirements for residents
+  - Focus heavily on mission fit and community service
+  
+  **Mission-Driven Schools:**
+  - Schools emphasizing service to underserved populations
+  - Institutions valuing diversity and unique perspectives
+  - Programs with strong community engagement focus
+  
+  ### **📊 Data-Driven Application Strategy**
+  - **Total Applications:** 20-25 (more than typical applicant)
+  - **DO Schools:** 60-70% of your list
+  - **In-State MD:** All available options
+  - **Mission-Fit MD:** Schools aligning with your background
+  - **Avoid:** Reach schools that waste application money
+  
+  ---
+  
+  ## 📝 **Application Compensation Tactics**
+  
+  ### **🎯 Narrative Strategy: Own Your Story**
+  
+  **Address Stats Head-On (Don't Ignore Them):**
+  - Brief, honest acknowledgment in personal statement
+  - Focus on growth and lessons learned
+  - Demonstrate current academic capability
+  - Show you can handle medical school rigor
+  
+  **Transform Challenges Into Strengths:**
+  - How obstacles built resilience
+  - What adversity taught you about perseverance
+  - How struggles help you relate to future patients
+  - Evidence of your problem-solving abilities
+  
+  ### **💪 Strength Amplification Strategy**
+  
+  **Clinical Experience (Make It Exceptional):**
+  - Extensive patient contact hours
+  - Leadership roles in clinical settings
+  - Evidence of commitment over time
+  - Stories demonstrating medical aptitude
+  
+  **Research Excellence:**
+  - Publications or presentations if possible
+  - Long-term commitment to projects
+  - Evidence of intellectual curiosity
+  - Skills transferable to medical practice
+  
+  **Leadership & Service:**
+  - Significant community impact
+  - Leadership roles with measurable outcomes
+  - Long-term commitment to causes
+  - Evidence of making a difference
+  
+  ---
+  
+  ## ⚠️ **Address Common Concerns**
+  
+  ### **🚨 Academic Capability Questions**
+  
+  **If GPA is the Issue:**
+  - Recent coursework showing improvement
+  - Post-bac or graduate coursework if needed
+  - Strong performance in science prerequisites
+  - Evidence of study skills improvement
+  
+  **If MCAT is the Issue:**
+  - Consider retaking if significantly below target
+  - Strong GPA can offset moderate MCAT concerns
+  - Demonstrate test-taking isn't your strength but learning is
+  - Show alternative evidence of scientific reasoning
+  
+  **If Both are Concerns:**
+  - Recent academic performance showing growth
+  - Consider SMP (Special Master's Program)
+  - Gap year to strengthen academic record
+  - Clear evidence of readiness for medical school rigor
+  
+  ---
+  
+  ## 🛤️ **Alternative Pathway Considerations**
+  
+  ### **📚 Academic Enhancement Options**
+  
+  **Post-Baccalaureate Programs:**
+  - GPA repair through additional coursework
+  - Demonstrate current academic capability
+  - Build relationships with new faculty
+  - Show commitment to improvement
+  
+  **Special Master's Programs (SMP):**
+  - Graduate-level coursework proving medical school readiness
+  - Often direct pathways to associated medical schools
+  - High-risk, high-reward option
+  - Requires strong performance to be beneficial
+  
+  **Gap Year Strategic Activities:**
+  - Clinical work demonstrating commitment
+  - Research positions building scientific skills
+  - Leadership roles showing growth
+  - Academic coursework addressing weak areas
+  
+  ---
+  
+  ## 📈 **Success Metrics & Milestones**
+  
+  ### **Application Cycle Goals**
+  - [ ] Submit applications to 20+ strategically selected schools
+  - [ ] Complete all secondaries within 2 weeks of receipt
+  - [ ] Secure multiple interview invitations
+  - [ ] Convert interviews to acceptances
+  
+  ### **Interview Preparation Focus**
+  - Address academic concerns proactively
+  - Demonstrate growth mindset and resilience
+  - Show exceptional commitment to medicine
+  - Prove you belong in medical school
+  
+  ---
+  
+  ## ✅ **Your Action Plan**
+  
+  **IMMEDIATE PRIORITIES:**
+  - [ ] Finalize school list using strategic criteria above
+  - [ ] Draft personal statement addressing stats constructively
+  - [ ] Gather evidence of academic improvement/capability
+  - [ ] Strengthen application in other areas
+  
+  **ONGOING STRATEGY:**
+  - [ ] Continue building clinical experience
+  - [ ] Maintain or improve academic performance
+  - [ ] Develop compelling narrative around growth
+  - [ ] Prepare for interviews with confidence
+  
+  **CONTINGENCY PLANNING:**
+  - [ ] Consider gap year activities if needed
+  - [ ] Explore post-bac or SMP options
+  - [ ] Prepare reapplication strategy if necessary
+  - [ ] Maintain motivation and persistence
+  
+  ---
+  
+  ## 💡 **Remember: Lower Stats ≠ Lower Potential**
+  
+  **Success Stories Mindset:**
+  - Many excellent physicians had non-traditional paths
+  - Resilience and determination often predict success better than test scores
+  - Your unique perspective will enhance the medical profession
+  - Focus on what you bring, not what you lack
+  
+  **The Long Game:**
+  - Medical school admission is just the beginning
+  - Your worth as a future physician isn't defined by these numbers
+  - Persistence and strategic thinking will get you there
+  - Every successful doctor faced challenges along the way
+  
+  ---
+  
+  **🚀 Ready to maximize your chances?** Use `school-selection-strategy` to build your strategic school list, or `personal-statement-framework` to craft your compelling narrative.
+  
+  *Strategy based on successful non-traditional applicant analysis and holistic admissions practices.*

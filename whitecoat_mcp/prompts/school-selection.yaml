@@ -1,0 +1,93 @@
+name: school-selection-strategy
+description: Create a personalized medical school application strategy
+arguments:
+  - name: gpa
+    description: Current GPA (e.g., 3.7)
+    required: true
+  - name: mcat_score
+    description: MCAT score or target score (e.g., 515)
+    required: true
+  - name: state_residency
+    description: State of residency for in-state advantages
+    required: true
+  - name: specialty_interest
+    description: Intended medical specialty or 'undecided'
+    required: false
+  - name: research_experience
+    description: Brief description of research background
+    required: false
+
+template: |
+  # 🎯 **Personalized Medical School Application Strategy**
+  
+  ---
+  
+  ## 📊 **Your Profile Assessment**
+  
+  **Academic Credentials:**
+  - **GPA:** {{gpa}}
+  - **MCAT Score:** {{mcat_score}}
+  - **State Residency:** {{state_residency}}
+  - **Specialty Interest:** {{specialty_interest || "Undecided"}}
+  - **Research Background:** {{research_experience || "Limited research experience"}}
+  
+  ---
+  
+  ## 🎯 **Strategic Analysis & Recommendations**
+  
+  Based on your profile and expert pre-med counseling strategies, here's your comprehensive application plan:
+  
+  ### **1. 📈 Competitiveness Assessment**
+  - How your stats compare to successful applicants
+  - Your strongest competitive advantages
+  - Areas that need strategic positioning
+  
+  ### **2. 🏫 School List Strategy**
+  - **Reach Schools (3-5):** Ambitious but achievable targets
+  - **Target Schools (8-12):** Strong probability matches  
+  - **Safety Schools (3-5):** Very likely acceptances
+  - **Total Recommended:** 15-20 strategic applications
+  
+  ### **3. 🚀 Application Enhancement Plan**
+  - Priority areas for strengthening your application
+  - Timeline for addressing any weaknesses
+  - How to leverage your unique strengths
+  
+  ### **4. 🗺️ State-Specific Advantages**
+  - Maximizing your {{state_residency}} residency benefits
+  - In-state school opportunities and requirements
+  - Public vs. private school considerations
+  
+  ---
+  
+  ## ✅ **Next Action Steps**
+  
+  **IMMEDIATE (This Week):**
+  - [ ] Research specific schools in each category
+  - [ ] Begin drafting school-specific essays
+  - [ ] Verify prerequisite completion
+  
+  **SHORT-TERM (Next Month):**
+  - [ ] Schedule campus visits or virtual sessions
+  - [ ] Connect with current students/alumni
+  - [ ] Finalize letter of recommendation requests
+  
+  **ONGOING:**
+  - [ ] Monitor application deadlines
+  - [ ] Continue strengthening weak areas
+  - [ ] Build relationships with admissions offices
+  
+  ---
+  
+  ## 🎯 **Success Metrics**
+  *Track your progress with these key indicators:*
+  - Applications submitted by deadlines
+  - Secondary completion rate
+  - Interview invitations received
+  - Acceptance offers
+  
+  ---
+  
+  **💡 Ready for your next step?** Use the `application-timeline` prompt to create your month-by-month plan, or `find-relevant-guidance` for specific school research strategies.
+  
+  *This analysis is based on current MSAR data, AAMC guidelines, and proven counseling strategies.*

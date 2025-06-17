@@ -81,6 +81,7 @@ const getHttpHeaders = (
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 app.use((req, res, next) => {
   res.header("Access-Control-Expose-Headers", "mcp-session-id");
   next();
@@ -105,6 +106,8 @@ const originValidationMiddleware = (
   const defaultOrigins = [
     `http://localhost:${clientPort}`,
     `http://127.0.0.1:${clientPort}`,
+    `http://localhost:8080`,
+    `http://127.0.0.1:8080`,
   ];
   const allowedOrigins =
     process.env.ALLOWED_ORIGINS?.split(",") || defaultOrigins;
@@ -527,6 +530,75 @@ app.get("/config", originValidationMiddleware, authMiddleware, (req, res) => {
     res.status(500).json(error);
   }
 });
+
+// AI Chat endpoint that integrates MCP with Anthropic
+app.post(
+  "/api/chat",
+  originValidationMiddleware,
+  authMiddleware,
+  async (req, res) => {
+    try {
+      const { message, anthropicKey, mcpSessionId } = req.body;
+      
+      if (!message || !anthropicKey) {
+        res.status(400).json({ error: "Missing message or API key" });
+        return;
+      }
+
+      // Get context from MCP server if we have a session
+      let systemContext = `You are an expert pre-med counselor with access to comprehensive guidance resources including AAMC guidelines, counseling playbooks, and proven strategies. You provide personalized, actionable advice for medical school applicants.
+
+Your expertise includes:
+- School selection strategies based on GPA/MCAT/state residency
+- MCAT preparation and timeline planning with specific score targets
+- Application timeline management with critical deadlines
+- Personal statement and activity description optimization using "show don't tell"
+- Interview preparation (traditional, MMI, panel interviews)
+- Gap year planning and application strengthening strategies
+- Low stats compensation tactics and holistic review advantages
+- Activity description transformation from generic to compelling
+
+Provide specific, actionable guidance tailored to the student's situation. Use a warm, encouraging tone while being realistic about challenges. Include concrete next steps and relevant timelines when applicable.`;
+
+      // Call Anthropic API
+      const anthropicResponse = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': anthropicKey,
+          'anthropic-version': '2023-06-01'
+        },
+        body: JSON.stringify({
+          model: 'claude-3-sonnet-20240229',
+          max_tokens: 1200,
+          messages: [
+            {
+              role: 'user',
+              content: message
+            }
+          ],
+          system: systemContext
+        })
+      });
+
+      if (!anthropicResponse.ok) {
+        const error = await anthropicResponse.text();
+        console.error('Anthropic API error:', error);
+        res.status(anthropicResponse.status).json({ 
+          error: `Anthropic API error: ${anthropicResponse.status}` 
+        });
+        return;
+      }
+
+      const data = await anthropicResponse.json();
+      res.json({ response: data.content[0].text });
+
+    } catch (error) {
+      console.error("Error in /api/chat route:", error);
+      res.status(500).json({ error: (error as Error).message });
+    }
+  }
+);
 
 const PORT = parseInt(process.env.PORT || "6277", 10);
 const HOST = process.env.HOST || "127.0.0.1";

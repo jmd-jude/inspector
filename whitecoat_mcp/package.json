@@ -1,0 +1,25 @@
+{
+  "name": "whitecoat",
+  "version": "1.0.0",
+  "description": "Interactive pre-med counseling system powered by expert guidance and AI",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --inspect src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "js-yaml": "^4.1.0"
+  },
+  "keywords": [
+    "mcp",
+    "premed",
+    "medical-school",
+    "admissions",
+    "counseling",
+    "digital-product"
+  ],
+  "author": "David G Mulei",
+  "license": "MIT"
+}

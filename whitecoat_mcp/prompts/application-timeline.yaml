@@ -1,0 +1,219 @@
+name: application-timeline
+description: Create a personalized timeline for medical school applications
+arguments:
+  - name: current_year
+    description: Current academic year (e.g., junior, senior, gap year)
+    required: true
+  - name: target_cycle
+    description: When you want to apply (e.g., 2026 cycle)
+    required: true
+  - name: mcat_status
+    description: MCAT status (not taken, scheduled, completed)
+    required: true
+
+template: |
+  # 📅 **Your Personalized Medical School Application Timeline**
+  
+  ---
+  
+  ## 🎯 **Your Application Profile**
+  
+  **Current Status:**
+  - **Academic Year:** {{current_year}}
+  - **Target Application Cycle:** {{target_cycle}}
+  - **MCAT Status:** {{mcat_status}}
+  
+  ---
+  
+  ## 📊 **Strategic Timeline Overview**
+  
+  Based on your {{current_year}} status and {{target_cycle}} target, here's your comprehensive roadmap to medical school success.
+  
+  ---
+  
+  ## 📅 **Month-by-Month Action Plan**
+  
+  ### **🌟 PRIORITY TIMELINE (18 Months Before Start)**
+  
+  **January - February (Pre-Application Year)**
+  - [ ] **MCAT Planning:** Schedule test date based on {{mcat_status}}
+  - [ ] **Prerequisites:** Complete remaining science requirements
+  - [ ] **Research:** Secure research positions for the year
+  - [ ] **Clinical Experience:** Begin or expand patient contact hours
+  
+  **March - April**
+  - [ ] **School Research:** Build preliminary school list (30+ schools)
+  - [ ] **Letters of Rec:** Identify and approach letter writers
+  - [ ] **Personal Statement:** Begin brainstorming and outlining
+  - [ ] **MCAT Prep:** Intensive study period (if taking spring/summer)
+  
+  **May - June**
+  - [ ] **Applications Open:** AMCAS/AACOMAS applications available
+  - [ ] **MCAT:** Take test if scheduled for early cycle
+  - [ ] **Personal Statement:** Complete first draft
+  - [ ] **School List:** Finalize strategic application list
+  
+  **July - August (Application Submission)**
+  - [ ] **Submit Primary:** AMCAS by end of June for early verification
+  - [ ] **MCAT Results:** Receive scores and adjust school list if needed
+  - [ ] **Secondary Prep:** Pre-write common secondary essays
+  - [ ] **Letters:** Ensure all recommendation letters submitted
+  
+  **September - November (Secondary Season)**
+  - [ ] **Secondary Applications:** Complete within 2 weeks of receipt
+  - [ ] **Interview Prep:** Begin intensive interview preparation
+  - [ ] **School Research:** Deep dive into schools sending secondaries
+  - [ ] **Updates:** Send meaningful updates to schools if applicable
+  
+  **December - April (Interview Season)**
+  - [ ] **Interviews:** Attend all interview invitations
+  - [ ] **Thank You Notes:** Send within 24 hours of interviews
+  - [ ] **Updates:** Continue sending significant updates
+  - [ ] **Decisions:** Receive acceptances, waitlists, rejections
+  
+  **May - July (Decision Time)**
+  - [ ] **Final Decisions:** Choose medical school by deadline
+  - [ ] **Deposit:** Submit enrollment deposit
+  - [ ] **Preparation:** Begin preparing for medical school start
+  
+  ---
+  
+  ## 🚨 **Critical Deadlines You Cannot Miss**
+  
+  ### **⏰ MCAT Deadlines**
+  - **Early Cycle:** January-May testing for same year application
+  - **Late Cycle:** June-August testing (results may delay applications)
+  - **Registration:** 1-2 months before test date for best times/locations
+  
+  ### **📝 Application Deadlines**
+  - **AMCAS Submission:** June 1st (for verification by July)
+  - **AACOMAS Submission:** May (can submit immediately)
+  - **Secondary Deadlines:** Varies by school (typically 2-4 weeks)
+  - **Final Application Deadlines:** October-December (varies by school)
+  
+  ### **💌 Letter of Recommendation**
+  - **Request Deadline:** 3-4 months before submission
+  - **Submission Deadline:** Before primary application submission
+  - **Follow-up:** 2 weeks before your deadline
+  
+  ---
+  
+  ## 🧪 **MCAT Strategic Planning**
+  
+  ### **Based on Your {{mcat_status}} Status:**
+  
+  **If "Not Taken":**
+  - **Recommended Timeline:** 4-6 months preparation
+  - **Optimal Test Dates:** January-May for {{target_cycle}} applications
+  - **Backup Plan:** June test date with potential gap year
+  
+  **If "Scheduled":**
+  - **Study Intensification:** Focus remaining time on weak areas
+  - **Practice Tests:** Weekly full-length exams
+  - **Contingency Planning:** Retake strategy if score disappoints
+  
+  **If "Completed":**
+  - **Score Analysis:** Assess competitiveness for target schools
+  - **School List Adjustment:** Align applications with your score
+  - **Retake Decision:** Consider if significant improvement possible
+  
+  ---
+  
+  ## 📋 **Application Component Checklist**
+  
+  ### **✍️ Personal Statement**
+  - **Start:** 6-8 months before submission
+  - **First Draft:** 4 months before submission
+  - **Final Version:** 2 months before submission
+  - **Word Count:** 5,300 characters for AMCAS
+  
+  ### **📄 Activity Descriptions**
+  - **Most Meaningful:** Choose 3 experiences for extended essays
+  - **Character Limits:** 700 characters for descriptions, 1,325 for meaningful
+  - **Strategy:** Show impact, not just responsibilities
+  
+  ### **🏫 School Selection**
+  - **Research Phase:** 6 months before applications
+  - **Preliminary List:** 30-40 schools
+  - **Final List:** 15-25 schools (mix of reach, target, safety)
+  - **Factors:** Stats, mission fit, location, cost
+  
+  ### **💌 Letters of Recommendation**
+  - **Science Professors:** 2 letters minimum
+  - **Non-Science Professor:** 1 letter
+  - **Clinical/Research Mentor:** 1-2 letters
+  - **Total:** 4-6 letters in letter packet
+  
+  ---
+  
+  ## 📚 **Prerequisites Completion Strategy**
+  
+  ### **Academic Requirements**
+  - [ ] **Biology:** 2 semesters with lab
+  - [ ] **Chemistry:** 2 semesters general + 2 semesters organic with labs
+  - [ ] **Physics:** 2 semesters with lab
+  - [ ] **Math:** Statistics and/or calculus
+  - [ ] **English:** 2 semesters composition/literature
+  
+  ### **Experiential Requirements**
+  - [ ] **Clinical Experience:** 100+ hours direct patient contact
+  - [ ] **Research:** 6+ months commitment, ideally with publication
+  - [ ] **Volunteering:** Community service showing commitment
+  - [ ] **Leadership:** Demonstrated leadership roles
+  - [ ] **Shadowing:** 50+ hours across multiple specialties
+  
+  ---
+  
+  ## 🔄 **Backup Plans & Contingencies**
+  
+  ### **If MCAT Score Disappoints:**
+  - **Option 1:** Retake MCAT and apply next cycle
+  - **Option 2:** Apply with current score to broader school list
+  - **Option 3:** Take gap year for preparation and reapplication
+  
+  ### **If Applications Are Late:**
+  - **Damage Control:** Submit as quickly as possible
+  - **School Adjustment:** Focus on schools with later deadlines
+  - **Next Cycle Prep:** Use as learning experience for reapplication
+  
+  ### **If No Acceptances:**
+  - **Gap Year Planning:** Strengthen weak application areas
+  - **Reapplication Strategy:** Comprehensive application analysis
+  - **Alternative Paths:** Consider DO schools, post-bac programs
+  
+  ---
+  
+  ## 📈 **Success Metrics & Milestones**
+  
+  ### **Monthly Check-ins:**
+  - [ ] Are you meeting timeline benchmarks?
+  - [ ] Do you need to adjust any deadlines?
+  - [ ] Are backup plans activated if needed?
+  
+  ### **Application Cycle Goals:**
+  - [ ] Submit applications by early deadlines
+  - [ ] Complete all secondaries within 2 weeks
+  - [ ] Secure multiple interview invitations
+  - [ ] Convert interviews to acceptances
+  
+  ---
+  
+  ## ✅ **Your Immediate Action Items**
+  
+  **THIS WEEK:**
+  - [ ] Create detailed calendar with all deadlines
+  - [ ] Assess current progress against timeline
+  - [ ] Identify any urgent gaps or delays
+  - [ ] Set up tracking system for requirements
+  
+  **THIS MONTH:**
+  - [ ] Begin work on most urgent timeline items
+  - [ ] Schedule regular progress check-ins
+  - [ ] Connect with advisors and mentors
+  - [ ] Start building accountability systems
+  
+  ---
+  
+  **🚀 Ready to execute your timeline?** Use `mcat-strategy` for detailed MCAT planning, or `school-selection-strategy` to build your strategic school list.
+  
+  *Timeline based on successful application cycles and AAMC recommendations.*

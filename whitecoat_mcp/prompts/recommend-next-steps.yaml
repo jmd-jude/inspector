@@ -1,0 +1,116 @@
+name: recommend-next-steps
+description: Get personalized recommendations for which prompts to use next
+arguments:
+  - name: gpa
+    description: Current GPA
+    required: false
+  - name: mcat_status
+    description: MCAT status (not taken, studying, scheduled, completed with score)
+    required: false  
+  - name: graduation_timeline
+    description: When you graduate/graduated
+    required: false
+  - name: main_concerns
+    description: Your biggest worries or challenges right now
+    required: true
+  - name: completed_prompts
+    description: Which prompts you've already used
+    required: false
+
+template: |
+  # 🎯 **Your Personalized Pre-Med Action Plan**
+  
+  ---
+  
+  ## 📊 **Current Situation Analysis**
+  
+  **Academic Profile:**
+  - **GPA:** {{gpa || "Not specified - we'll work with what we have"}}
+  - **MCAT Status:** {{mcat_status || "Not specified"}}
+  - **Graduation Timeline:** {{graduation_timeline || "Not specified"}}
+  
+  **Primary Concerns:** {{main_concerns}}
+  
+  **Previous Guidance:** {{completed_prompts || "Fresh start - let's build your foundation"}}
+  
+  ---
+  
+  ## 🚨 **IMMEDIATE PRIORITY** 
+  
+  ### **🎯 Your #1 Action Item:**
+  Based on your concerns and timeline, here's what you should tackle FIRST:
+  
+  **Recommended Prompt:** `[Most urgent prompt based on their situation]`
+  
+  **Why This First:** [Explanation of why this is the highest priority]
+  
+  **Expected Outcome:** [What they'll gain from completing this prompt]
+  
+  ---
+  
+  ## 📋 **Strategic Sequence Plan**
+  
+  ### **NEXT STEPS (Complete in Order):**
+  
+  **2. 🎯 Second Priority**
+  - **Prompt:** `[Second most important prompt]`
+  - **Purpose:** [Brief explanation]
+  - **Timeline:** [When to complete]
+  
+  **3. 🎯 Third Priority**  
+  - **Prompt:** `[Third priority prompt]`
+  - **Purpose:** [Brief explanation]
+  - **Timeline:** [When to complete]
+  
+  **4. 🎯 Fourth Priority**
+  - **Prompt:** `[Fourth priority prompt]`
+  - **Purpose:** [Brief explanation]
+  - **Timeline:** [When to complete]
+  
+  ---
+  
+  ## ⚠️ **Red Flags Identified**
+  
+  Based on your profile, here are potential issues to address:
+  
+  - **[Specific concern based on their data]**
+  - **[Another potential issue]**
+  - **[Third area of concern]**
+  
+  ---
+  
+  ## ✅ **Strengths to Leverage**
+  
+  Here's what's working in your favor:
+  
+  - **[Positive aspect from their profile]**
+  - **[Another strength to build on]**
+  - **[Third advantage to maximize]**
+  
+  ---
+  
+  ## 🎬 **Ready to Take Action?**
+  
+  **Copy/paste this command to start:**
+  ```
+  Use the [recommended-prompt] prompt with my [relevant parameters]
+  ```
+  
+  **After completing that, return here for your next step or use:**
+  ```
+  Use the recommend-next-steps prompt with updated completed_prompts
+  ```
+  
+  ---
+  
+  ## 📈 **Success Tracking**
+  
+  **Completed Steps:** ☐ ☐ ☐ ☐  
+  **Target Completion:** [Suggested timeline]  
+  **Progress Check-in:** [When to reassess]  
+  
+  ---
+  
+  **💪 Remember:** Every successful pre-med student started with one focused action. Your journey to medical school begins with the next prompt you choose!
+  
+  *Personalized guidance based on proven counseling frameworks and current admissions data.*

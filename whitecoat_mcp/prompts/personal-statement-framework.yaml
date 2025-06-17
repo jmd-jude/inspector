@@ -1,0 +1,178 @@
+name: personal-statement-framework
+description: Build a compelling personal statement that showcases your unique journey to medicine
+arguments:
+  - name: motivation_story
+    description: The main experience or realization that drew you to medicine
+    required: true
+  - name: key_experiences
+    description: 2-3 most meaningful experiences (clinical, research, volunteer, personal)
+    required: true
+  - name: unique_background
+    description: What makes you different from other applicants
+    required: false
+  - name: challenges_overcome
+    description: Significant obstacles you've faced and overcome
+    required: false
+
+template: |
+  # ✍️ **Your Compelling Personal Statement Blueprint**
+  
+  ---
+  
+  ## 🎯 **Your Story Foundation**
+  
+  **Core Motivation:** {{motivation_story}}
+  
+  **Key Experiences:** {{key_experiences}}
+  
+  **Unique Background:** {{unique_background || "We'll discover what makes you special"}}
+  
+  **Challenges Overcome:** {{challenges_overcome || "We'll identify your growth moments"}}
+  
+  ---
+  
+  ## 🏗️ **Personal Statement Architecture**
+  
+  ### **The "Show Don't Tell" Framework**
+  
+  **❌ AVOID (Telling):** "I've always wanted to be a doctor and I'm passionate about helping people."
+  
+  **✅ DO (Showing):** "When Mrs. Chen gripped my hand and whispered 'thank you for seeing me,' I understood that medicine wasn't just about diagnosis—it was about human connection in moments of vulnerability."
+  
+  ---
+  
+  ## 📝 **Paragraph-by-Paragraph Structure**
+  
+  ### **🎬 Paragraph 1: The Hook (120-150 words)**
+  **Purpose:** Grab attention and establish your central theme
+  
+  **Your Hook Strategy:**
+  - Start with your most compelling moment from: {{motivation_story}}
+  - Avoid clichés: "Since childhood..." or "I've always wanted..."
+  - Create immediate emotional connection
+  
+  **Template:**
+  > [Specific scene/moment] → [What you realized] → [Connection to medicine]
+  
+  ### **📖 Paragraph 2: Evidence & Experience (150-180 words)**
+  **Purpose:** Show how experiences shaped your understanding
+  
+  **Your Evidence:**
+  - Transform {{key_experiences}} into specific stories
+  - Focus on what you learned, not what you did
+  - Show character development and insight
+  
+  ### **🔍 Paragraph 3: Growth & Reflection (150-180 words)**
+  **Purpose:** Demonstrate self-awareness and maturity
+  
+  **Your Growth Story:**
+  - Address {{challenges_overcome}} as learning opportunities
+  - Show how obstacles strengthened your resolve
+  - Demonstrate resilience and problem-solving
+  
+  ### **🚀 Paragraph 4: Vision & Contribution (120-150 words)**
+  **Purpose:** Connect your past to your medical future
+  
+  **Your Future Vision:**
+  - How your unique background ({{unique_background}}) will enhance medicine
+  - Specific ways you'll contribute to your medical school class
+  - Clear connection between experiences and medical career goals
+  
+  ---
+  
+  ## ✨ **Expert Writing Techniques**
+  
+  ### **🎨 Show Don't Tell Mastery**
+  
+  **Instead of:** "I learned communication skills"
+  **Write:** "After three failed attempts to explain diabetes management, I realized Mrs. Rodriguez wasn't confused—she was scared. I sat down, set aside my clipboard, and asked about her family's eating traditions."
+  
+  ### **🔍 Specificity Over Generality**
+  
+  **Instead of:** "I volunteered at a hospital"
+  **Write:** "Every Tuesday, I wheeled patients from the cardiac wing to radiology, learning that the 47-second elevator ride was often when they shared their deepest fears."
+  
+  ### **💪 Active Voice Power**
+  
+  **Instead of:** "I was taught the importance of teamwork"
+  **Write:** "I coordinated with nurses, social workers, and families to ensure..."
+  
+  ---
+  
+  ## 🚫 **Fatal Mistakes to Eliminate**
+  
+  ### **❌ The Comparison Trap**
+  - Never compare your activities to "being like a doctor"
+  - Avoid: "As a tutor, I was like a teacher, which is similar to how doctors educate patients"
+  
+  ### **❌ The Laundry List**
+  - Don't mention every activity you've done
+  - Focus on 2-3 experiences with deep reflection
+  
+  ### **❌ The Generic Statement**
+  - Avoid anything that could apply to any applicant
+  - Make every sentence uniquely yours
+  
+  ### **❌ The Pity Party**
+  - Don't focus on obstacles as excuses
+  - Transform challenges into growth stories
+  
+  ---
+  
+  ## 🔄 **The Revision Strategy**
+  
+  ### **Round 1: Story Structure**
+  - [ ] Clear narrative arc from motivation to future vision
+  - [ ] Each paragraph serves a distinct purpose
+  - [ ] Strong transitions between ideas
+  
+  ### **Round 2: Show vs. Tell Audit**
+  - [ ] Replace abstract statements with concrete scenes
+  - [ ] Add sensory details and specific examples
+  - [ ] Eliminate generic phrases
+  
+  ### **Round 3: Polish & Power**
+  - [ ] Every sentence adds value
+  - [ ] Active voice throughout
+  - [ ] Compelling opening and closing
+  
+  ---
+  
+  ## ✅ **Quality Checkpoints**
+  
+  **The "Memory Test":**
+  - Will admissions officers remember your story after reading 100 essays?
+  - What specific details make you unforgettable?
+  
+  **The "Unique Test":**
+  - Could another applicant have written this exact essay?
+  - What makes this uniquely YOUR story?
+  
+  **The "Impact Test":**
+  - Does this make readers want to meet you?
+  - Do you come across as someone they'd want as a classmate?
+  
+  ---
+  
+  ## 🎯 **Your Action Plan**
+  
+  **STEP 1: Outline (This Week)**
+  - [ ] Map out your 4-paragraph structure
+  - [ ] Identify specific scenes for each section
+  - [ ] Choose your strongest hook moment
+  
+  **STEP 2: Draft (Next Week)**
+  - [ ] Write first draft focusing on content, not perfection
+  - [ ] Use specific examples and concrete details
+  - [ ] Stay within word limits (varies by school)
+  
+  **STEP 3: Revise (Following Weeks)**
+  - [ ] Multiple revision rounds using framework above
+  - [ ] Get feedback from advisors and mentors
+  - [ ] Final polish and proofread
+  
+  ---
+  
+  **🚀 Ready to write your unforgettable story?** Use `activity-description-optimizer` to enhance your experience narratives, or `school-selection-strategy` to align your statement with target schools.
+  
+  *Framework based on successful personal statements and admissions committee feedback.*

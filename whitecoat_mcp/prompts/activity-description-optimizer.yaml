@@ -1,0 +1,197 @@
+name: activity-description-optimizer
+description: Transform bland activity descriptions into compelling narratives that showcase your impact
+arguments:
+  - name: activity_type
+    description: Type of activity (clinical, research, volunteer, leadership, etc.)
+    required: true
+  - name: basic_description
+    description: Your current description or basic summary of what you did
+    required: true
+  - name: hours_commitment
+    description: Total hours and time period
+    required: true
+  - name: specific_impact
+    description: Specific examples of your contributions or memorable moments
+    required: false
+
+template: |
+  # ✨ **Transform Your Activity Into an Unforgettable Story**
+  
+  ---
+  
+  ## 📋 **Your Activity Profile**
+  
+  **Activity Type:** {{activity_type}}
+  
+  **Current Description:** {{basic_description}}
+  
+  **Time Investment:** {{hours_commitment}}
+  
+  **Impact Examples:** {{specific_impact || "We'll discover your memorable moments together"}}
+  
+  ---
+  
+  ## 🎯 **The Transformation Framework**
+  
+  ### **❌ BEFORE (Generic Job Description)**
+  *"I tutored students in chemistry and helped them with homework and test preparation."*
+  
+  ### **✅ AFTER (Compelling Impact Story)**
+  *"When Charlie, a 45-year-old veteran, sat down with a smile and announced 'I changed my major to chemistry!' I realized I hadn't just taught formulas—I'd helped someone discover their passion."*
+  
+  **The Difference:** Specific person + concrete outcome + personal insight = memorable story
+  
+  ---
+  
+  ## 🔍 **Find Your "Charlie" Moment**
+  
+  ### **Discovery Questions for {{activity_type}}:**
+  
+  **Who was impacted?**
+  - What specific person benefited from your involvement?
+  - What was their situation or challenge?
+  - How did they change because of your contribution?
+  
+  **What was the turning point?**
+  - When did you realize you were making a difference?
+  - What moment showed your real impact?
+  - What surprised you about this experience?
+  
+  **How did YOU grow?**
+  - What skill did you develop that you didn't expect?
+  - How did this change your perspective?
+  - What did you learn about yourself?
+  
+  ---
+  
+  ## 🎨 **Activity-Specific Optimization**
+  
+  ### **🏥 Clinical Experience Optimization**
+  
+  **Instead of:** "Shadowed doctors and observed patient interactions"
+  **Transform to:** "Watched Dr. Martinez spend an extra 10 minutes explaining a diabetes diagnosis in Spanish, teaching me that effective medicine requires cultural fluency, not just clinical knowledge."
+  
+  ### **🔬 Research Experience Optimization**
+  
+  **Instead of:** "Conducted research on protein folding under Dr. Smith"
+  **Transform to:** "After 47 failed protein crystallization attempts, the 48th finally worked—teaching me that scientific breakthroughs require resilience and systematic problem-solving."
+  
+  ### **❤️ Volunteer Experience Optimization**
+  
+  **Instead of:** "Volunteered at food bank serving meals to homeless individuals"
+  **Transform to:** "When Maria thanked me in broken English for remembering she preferred her coffee black, I understood that dignity comes from being seen as an individual, not just someone in need."
+  
+  ### **👥 Leadership Experience Optimization**
+  
+  **Instead of:** "Led a team of 15 volunteers in organizing charity events"
+  **Transform to:** "Turned a group of frustrated volunteers into an efficient team by implementing weekly check-ins, resulting in our most successful fundraiser yet."
+  
+  ---
+  
+  ## 📝 **Character Limit Mastery**
+  
+  ### **For AMCAS (700 characters max):**
+  **Structure:** Hook moment (200) + Context (200) + Impact/Growth (200) + Future connection (100)
+  
+  ### **For Most Meaningful Essays (1,325 characters):**
+  **Structure:** Extended story + deeper reflection + specific skills gained + future applications
+  
+  ### **For Secondary Essays (varies):**
+  **Structure:** Connect to school's specific mission and values
+  
+  ---
+  
+  ## ✨ **Power Writing Techniques**
+  
+  ### **🎬 Cinematic Opening**
+  - Start in the middle of action or conversation
+  - Use sensory details (what you saw, heard, felt)
+  - Include specific dialogue when possible
+  
+  ### **📊 Concrete Evidence**
+  - Replace "many patients" with "47 patients over 6 months"
+  - Replace "improved outcomes" with "reduced readmission rates by 15%"
+  - Replace "learned teamwork" with specific collaboration example
+  
+  ### **🔗 Future Connection**
+  - How does this experience prepare you for medical school?
+  - What specific skills will transfer to your medical career?
+  - How will this perspective enhance patient care?
+  
+  ---
+  
+  ## 🚫 **Elimination Checklist**
+  
+  ### **❌ Delete These Phrases:**
+  - "This experience taught me..."
+  - "I learned the importance of..."
+  - "Working with patients is like..."
+  - "This showed me that medicine..."
+  - "I gained valuable experience in..."
+  
+  ### **✅ Replace With:**
+  - Specific scenes and moments
+  - Concrete examples of growth
+  - Evidence of your impact
+  - Personal insights and realizations
+  - Future-focused connections
+  
+  ---
+  
+  ## 🔄 **The 3-Round Revision Process**
+  
+  ### **Round 1: Story Extraction**
+  - [ ] Identify your most meaningful moment
+  - [ ] Add specific people, places, and details
+  - [ ] Include dialogue or direct quotes when possible
+  
+  ### **Round 2: Impact Amplification**
+  - [ ] Show concrete results of your involvement
+  - [ ] Demonstrate personal growth and learning
+  - [ ] Connect skills to future medical practice
+  
+  ### **Round 3: Polish & Power**
+  - [ ] Eliminate generic phrases
+  - [ ] Ensure every word adds value
+  - [ ] Test for memorability and uniqueness
+  
+  ---
+  
+  ## ✅ **Quality Tests**
+  
+  **The Replacement Test:**
+  - Could any other student have written this exact description?
+  - If yes, add more specific details and personal insight
+  
+  **The Memory Test:**
+  - Will admissions officers remember this story after reading hundreds?
+  - What makes it stick in their minds?
+  
+  **The Growth Test:**
+  - Does this show clear personal development?
+  - Can readers see how you'll contribute to their medical school?
+  
+  ---
+  
+  ## 🎯 **Your Transformation Action Plan**
+  
+  **IMMEDIATE (Today):**
+  - [ ] Identify your most impactful moment from {{activity_type}}
+  - [ ] Write 3-4 specific details about that moment
+  - [ ] Name the person(s) who were affected
+  
+  **THIS WEEK:**
+  - [ ] Draft new description using framework above
+  - [ ] Apply character limit constraints for your target application
+  - [ ] Get feedback from mentors or advisors
+  
+  **NEXT STEPS:**
+  - [ ] Revise using 3-round process
+  - [ ] Test with fresh readers for clarity and impact
+  - [ ] Finalize for application submission
+  
+  ---
+  
+  **🚀 Ready to make your activities unforgettable?** Use `personal-statement-framework` to weave these stories into your main narrative, or `school-selection-strategy` to align experiences with target school values.
+  
+  *Transformation strategy based on successful application analysis and admissions committee feedback.*

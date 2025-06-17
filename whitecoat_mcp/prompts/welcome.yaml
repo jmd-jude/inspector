@@ -1,0 +1,84 @@
+name: welcome
+description: Get started with your personalized pre-med counseling experience
+arguments:
+  - name: student_name
+    description: Your name for personalization
+    required: false
+  - name: current_stage
+    description: Where you are in your pre-med journey (sophomore, junior, senior, gap year, etc.)
+    required: false
+
+template: |
+  # 🩺 **Welcome to Your Personal Pre-Med Counseling Assistant**{{student_name && ", " + student_name}}!
+  
+  ---
+  
+  ## 🎯 **Transform Your Pre-Med Journey**
+  
+  I provide **expert guidance** tailored to your unique situation using professional counseling strategies and AAMC guidelines. No more generic advice - get specific recommendations for YOUR profile.
+  
+  {{current_stage && "### 📍 **Perfect Timing for " + current_stage + " Students**\nYou're at a crucial stage - let's maximize this opportunity!\n"}}
+  
+  ---
+  
+  ## 🚀 **Your Personalized Guidance Menu**
+  
+  ### **📚 Academic Strategy**
+  - **`school-selection-strategy`** → Build your strategic school application list
+  - **`application-timeline`** → Month-by-month planning for your cycle  
+  - **`mcat-strategy`** → Comprehensive MCAT preparation roadmap
+  
+  ### **✍️ Application Excellence**
+  - **`personal-statement-framework`** → Craft your compelling narrative
+  - **`activity-description-optimizer`** → Transform experiences into stories
+  - **`interview-prep`** → Master any interview format
+  
+  ### **💪 Strategic Planning**
+  - **`gap-year-planning`** → Productive gap year strategies
+  - **`low-stats-strategy`** → Maximize chances with lower stats
+  - **`recommend-next-steps`** → Get AI-powered recommendations
+  
+  ### **🔧 Quick Assistance**
+  - **`find-relevant-guidance`** → Search for specific advice
+  - **`school-matcher`** → Match schools to your profile
+  - **`quick-help`** → Fast navigation menu
+  
+  ---
+  
+  ## 💡 **How to Get Started**
+  
+  **Option 1 - Quick Assessment:**
+  ```
+  Use the recommend-next-steps prompt with:
+  - Main concerns: [Your biggest worry]
+  ```
+  
+  **Option 2 - Dive Right In:**
+  ```
+  Use the school-selection-strategy prompt with:
+  - GPA: [Your GPA]
+  - MCAT score: [Your score/target]
+  - State residency: [Your state]
+  ```
+  
+  **Option 3 - Get Oriented:**
+  ```
+  Use the quick-help prompt with:
+  - Urgent need: [What you need help with right now]
+  ```
+  
+  ---
+  
+  ## ✅ **What Makes This Different**
+  
+  ✅ **Personalized:** Specific to YOUR stats and situation  
+  ✅ **Expert-Driven:** Based on professional counseling strategies  
+  ✅ **Actionable:** Clear next steps and timelines  
+  ✅ **Current:** Uses latest AAMC guidelines and data  
+  ✅ **Comprehensive:** Covers every aspect of your journey  
+  
+  ---
+  
+  **🎯 Ready to start?** Tell me your biggest pre-med challenge and I'll point you to the perfect prompt!
+  
+  *Your success is our mission. Let's build your path to medical school together.*

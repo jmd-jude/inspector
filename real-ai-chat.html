@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pre-Med Counselor - Real AI Integration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chat-container {
+            width: 90%;
+            max-width: 800px;
+            height: 90vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .chat-header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .chat-header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .status-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status-connected {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        .status-disconnected {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+            border: 1px solid rgba(244, 67, 54, 0.3);
+        }
+        
+        .setup-section {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .setup-section.hidden {
+            display: none;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .connect-btn {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .connect-btn:hover {
+            background: #5a67d8;
+        }
+        
+        .connect-btn:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0 12px;
+        }
+        
+        .message.user .message-avatar {
+            background: #667eea;
+            color: white;
+        }
+        
+        .message.assistant .message-avatar {
+            background: #28a745;
+            color: white;
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 16px 20px;
+            border-radius: 18px;
+            font-size: 15px;
+            line-height: 1.5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .message.user .message-content {
+            background: #667eea;
+            color: white;
+        }
+        
+        .message.assistant .message-content {
+            background: white;
+            color: #2d3748;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+            align-items: center;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            margin-right: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 15px;
+        }
+        
+        .send-btn {
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background 0.2s;
+        }
+        
+        .send-btn:hover:not(:disabled) {
+            background: #5a67d8;
+        }
+        
+        .send-btn:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+        }
+        
+        .typing-indicator {
+            display: none;
+            padding: 16px 20px;
+            background: white;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            align-items: center;
+        }
+        
+        .typing-dots {
+            display: flex;
+            align-items: center;
+        }
+        
+        .typing-dots span {
+            height: 8px;
+            width: 8px;
+            background: #cbd5e0;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+            animation: typing 1.5s infinite;
+        }
+        
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                background: #cbd5e0;
+            }
+            30% {
+                transform: translateY(-10px);
+                background: #667eea;
+            }
+        }
+        
+        .quick-prompts {
+            padding: 15px 20px;
+            background: #f1f3f4;
+            border-top: 1px solid #e9ecef;
+            display: none;
+        }
+        
+        .quick-prompts.show {
+            display: block;
+        }
+        
+        .quick-prompts h4 {
+            margin-bottom: 10px;
+            color: #495057;
+            font-size: 14px;
+        }
+        
+        .prompt-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .prompt-btn {
+            padding: 8px 16px;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .prompt-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .error-message {
+            padding: 15px;
+            background: #fee;
+            border: 1px solid #fcc;
+            border-radius: 8px;
+            color: #c33;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🩺 AI Pre-Med Counselor</h1>
+            <p>Get personalized guidance for your medical school journey</p>
+            <div class="status-indicator status-disconnected" id="statusIndicator">
+                ● Disconnected
+            </div>
+        </div>
+
+        <div class="setup-section" id="setupSection">
+            <div class="form-group">
+                <label for="anthropicKey">Anthropic API Key:</label>
+                <input type="password" id="anthropicKey" placeholder="sk-ant-api03-..." />
+            </div>
+            
+            <div class="form-group">
+                <label for="proxyToken">MCP Proxy Token:</label>
+                <input type="text" id="proxyToken" placeholder="Paste token from inspector terminal" />
+            </div>
+            
+            <button class="connect-btn" onclick="connectSystem()">Connect AI Counselor</button>
+            
+            <div id="setupError"></div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message assistant">
+                <div class="message-avatar">AI</div>
+                <div class="message-content">
+                    <strong>Hello! I'm your AI Pre-Med Counselor.</strong><br><br>
+                    I have access to comprehensive pre-med guidance including AAMC guidelines, school selection strategies, MCAT prep, interview techniques, and more.<br><br>
+                    <em>Please connect the system above to get started with personalized advice!</em>
+                </div>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="message-avatar">AI</div>
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="quick-prompts" id="quickPrompts">
+            <h4>💡 Try asking about:</h4>
+            <div class="prompt-buttons">
+                <div class="prompt-btn" onclick="sendQuickMessage('What schools should I apply to with a 3.6 GPA and 510 MCAT?')">School Selection</div>
+                <div class="prompt-btn" onclick="sendQuickMessage('How should I prepare for the MCAT?')">MCAT Strategy</div>
+                <div class="prompt-btn" onclick="sendQuickMessage('Help me plan my application timeline')">Timeline Planning</div>
+                <div class="prompt-btn" onclick="sendQuickMessage('Interview preparation tips')">Interview Prep</div>
+                <div class="prompt-btn" onclick="sendQuickMessage('Should I take a gap year?')">Gap Year Planning</div>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Ask me about medical school applications, MCAT prep, interviews..." disabled />
+            <button class="send-btn" id="sendBtn" onclick="sendMessage()" disabled>
+                ➤
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let isConnected = false;
+        let anthropicKey = '';
+        let proxyToken = '';
+        
+        // Enable enter key to send messages
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        async function connectSystem() {
+            const keyInput = document.getElementById('anthropicKey');
+            const tokenInput = document.getElementById('proxyToken');
+            const errorDiv = document.getElementById('setupError');
+            const connectBtn = document.querySelector('.connect-btn');
+            
+            anthropicKey = keyInput.value.trim();
+            proxyToken = tokenInput.value.trim();
+            
+            if (!anthropicKey) {
+                showError('Please enter your Anthropic API key');
+                return;
+            }
+            
+            if (!proxyToken) {
+                showError('Please enter the MCP proxy token from your terminal');
+                return;
+            }
+            
+            connectBtn.disabled = true;
+            connectBtn.textContent = 'Connecting...';
+            errorDiv.innerHTML = '';
+            
+            try {
+                // Test the connection with a simple request
+                const testResponse = await fetch('http://localhost:6277/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-MCP-Proxy-Auth': `Bearer ${proxyToken}`
+                    },
+                    body: JSON.stringify({
+                        message: 'Hello, are you working?',
+                        anthropicKey: anthropicKey,
+                        mcpSessionId: null
+                    })
+                });
+                
+                if (testResponse.ok) {
+                    isConnected = true;
+                    updateConnectionStatus(true);
+                    document.getElementById('setupSection').classList.add('hidden');
+                    document.getElementById('quickPrompts').classList.add('show');
+                    enableChat();
+                    
+                    addMessage('assistant', `🎉 <strong>Connection successful!</strong><br><br>I'm now connected to your expert pre-med knowledge base with real AI integration. I can provide personalized guidance on:<br><br>• School selection strategies<br>• MCAT preparation planning<br>• Application timelines<br>• Interview preparation<br>• Gap year planning<br>• And much more!<br><br>What would you like to know about your medical school journey?`);
+                } else {
+                    throw new Error(`Connection test failed: ${testResponse.status}`);
+                }
+            } catch (error) {
+                showError(`Connection failed: ${error.message}. Please check your API key and proxy token.`);
+                connectBtn.disabled = false;
+                connectBtn.textContent = 'Connect AI Counselor';
+            }
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('setupError');
+            errorDiv.innerHTML = `<div class="error-message">${message}</div>`;
+        }
+        
+        function updateConnectionStatus(connected) {
+            const indicator = document.getElementById('statusIndicator');
+            if (connected) {
+                indicator.className = 'status-indicator status-connected';
+                indicator.textContent = '● Connected';
+            } else {
+                indicator.className = 'status-indicator status-disconnected';
+                indicator.textContent = '● Disconnected';
+            }
+        }
+        
+        function enableChat() {
+            document.getElementById('messageInput').disabled = false;
+            document.getElementById('sendBtn').disabled = false;
+        }
+        
+        function addMessage(role, content) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            avatar.textContent = role === 'user' ? 'You' : 'AI';
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = content;
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(contentDiv);
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        function showTyping() {
+            document.getElementById('typingIndicator').style.display = 'flex';
+            const messagesDiv = document.getElementById('chatMessages');
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        function hideTyping() {
+            document.getElementById('typingIndicator').style.display = 'none';
+        }
+        
+        function sendQuickMessage(message) {
+            const input = document.getElementById('messageInput');
+            input.value = message;
+            sendMessage();
+        }
+        
+        async function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message || !isConnected) return;
+            
+            input.value = '';
+            addMessage('user', message);
+            showTyping();
+            
+            try {
+                const response = await callAnthropicWithMCP(message);
+                hideTyping();
+                addMessage('assistant', response);
+            } catch (error) {
+                hideTyping();
+                addMessage('assistant', `❌ <strong>Error:</strong> ${error.message}<br><br>Please check your API key and connection.`);
+            }
+        }
+        
+        async function callAnthropicWithMCP(userMessage) {
+            const response = await fetch('http://localhost:6277/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-MCP-Proxy-Auth': `Bearer ${proxyToken}`
+                },
+                body: JSON.stringify({
+                    message: userMessage,
+                    anthropicKey: anthropicKey,
+                    mcpSessionId: null
+                })
+            });
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                if (response.status === 401) {
+                    throw new Error('Invalid API key or proxy token');
+                }
+                throw new Error(`API Error: ${response.status} - ${errorText}`);
+            }
+            
+            const data = await response.json();
+            return data.response;
+        }
+    </script>
+</body>
+</html>

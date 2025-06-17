@@ -1,0 +1,271 @@
+name: interview-prep
+description: Prepare for medical school interviews with targeted guidance
+arguments:
+  - name: interview_type
+    description: Type of interview (MMI, traditional, panel, etc.)
+    required: true
+  - name: school_name
+    description: Name of the medical school
+    required: true
+  - name: weak_areas
+    description: Areas you're concerned about discussing
+    required: false
+
+template: |
+  # 🎯 **Master Your Medical School Interview**
+  *Turn your interview invitation into an acceptance*
+  
+  ---
+  
+  ## 📋 **Your Interview Profile**
+  
+  **Interview Format:** {{interview_type}}
+  
+  **Target School:** {{school_name}}
+  
+  **Areas of Concern:** {{weak_areas || "General interview anxiety and performance optimization"}}
+  
+  ---
+  
+  ## 🏗️ **Interview Format Mastery**
+  
+  ### **🎭 {{interview_type}} Interview Deep Dive**
+  
+  **Format Overview:**
+  - **Structure:** Multiple mini-scenarios vs. traditional long-form discussion
+  - **Duration:** Timing and pacing expectations
+  - **Evaluation Criteria:** What interviewers are specifically assessing
+  - **Unique Challenges:** Format-specific pitfalls to avoid
+  
+  **Success Strategy for {{interview_type}}:**
+  - **Preparation Approach:** How to practice effectively for this format
+  - **Time Management:** Optimal pacing and response structure
+  - **Scoring Optimization:** How to maximize points in each scenario
+  - **Recovery Techniques:** How to bounce back from difficult stations
+  
+  ---
+  
+  ## 🏫 **{{school_name}} Strategic Preparation**
+  
+  ### **🎯 School-Specific Intelligence**
+  
+  **Mission & Values Alignment:**
+  - **Core Mission:** How {{school_name}} defines its educational purpose
+  - **Your Fit:** Specific examples of how you align with their values
+  - **Talking Points:** Key themes to weave throughout your interview
+  
+  **Program Distinguishing Features:**
+  - **Curriculum Highlights:** Unique aspects of their educational approach
+  - **Research Opportunities:** Specific programs matching your interests
+  - **Clinical Exposure:** Their approach to clinical training
+  - **Community Connection:** How they serve their local population
+  
+  **Recent News & Developments:**
+  - **Current Initiatives:** New programs or research areas
+  - **Faculty Highlights:** Notable faculty you could mention
+  - **Student Achievements:** Recent accomplishments you could reference
+  
+  ### **🔍 Insider Interview Details**
+  - **Typical Interview Day Schedule:** What to expect hour by hour
+  - **Faculty vs. Student Interviewers:** Different preparation strategies
+  - **Common {{school_name}} Questions:** School-specific prompts they frequently use
+  - **Interview Location:** Campus logistics and what to expect
+  
+  ---
+  
+  ## 💪 **Address Your Concern Areas**
+  
+  ### **🎯 Strategic Approach to {{weak_areas}}**
+  
+  **Reframing Strategy:**
+  - **Turn Weakness into Growth Story:** How to discuss challenges constructively
+  - **Evidence of Improvement:** Concrete examples of how you've addressed this area
+  - **Future Prevention:** What you've learned to prevent similar issues
+  - **Professional Maturity:** Demonstrating self-awareness and accountability
+  
+  **Specific Talking Points:**
+  - **Honest Acknowledgment:** Brief, direct recognition without over-explaining
+  - **Action Steps Taken:** Specific measures you implemented for improvement
+  - **Lessons Learned:** Insights gained that make you a better future physician
+  - **Future Application:** How this experience will help you in medical school
+  
+  **Practice Scenarios:**
+  - **Direct Question Approach:** When asked directly about this weakness
+  - **Indirect Integration:** Weaving improvement story into other responses
+  - **Strength Positioning:** Using this as evidence of resilience and growth
+  
+  ---
+  
+  ## 📚 **Essential Story Arsenal**
+  
+  ### **🎭 The STAR Method for Medical School**
+  
+  **Situation + Task + Action + Result + Reflection**
+  
+  **Your Top 5 Stories (Prepare These First):**
+  
+  **1. Clinical Experience Story**
+  - **Purpose:** Demonstrate patient interaction and medical commitment
+  - **Key Elements:** Specific patient encounter, your role, impact, learning
+  - **Variations:** Adapt for teamwork, communication, or empathy questions
+  
+  **2. Research/Academic Achievement**
+  - **Purpose:** Show intellectual curiosity and scientific thinking
+  - **Key Elements:** Problem identified, methodology, results, implications
+  - **Variations:** Use for problem-solving, persistence, or innovation questions
+  
+  **3. Leadership/Teamwork Challenge**
+  - **Purpose:** Demonstrate collaboration and leadership potential
+  - **Key Elements:** Team conflict, your approach, resolution, outcome
+  - **Variations:** Adapt for conflict resolution, leadership style, or collaboration
+  
+  **4. Personal Challenge/Growth**
+  - **Purpose:** Show resilience, self-awareness, and maturity
+  - **Key Elements:** Obstacle faced, steps taken, growth achieved, application
+  - **Variations:** Use for adversity, failure, or personal development questions
+  
+  **5. Service/Community Impact**
+  - **Purpose:** Demonstrate commitment to service and community understanding
+  - **Key Elements:** Community need, your involvement, measurable impact, reflection
+  - **Variations:** Adapt for diversity, service, or community health questions
+  
+  ---
+  
+  ## ❓ **High-Probability Question Preparation**
+  
+  ### **🎯 Universal Medical School Questions**
+  
+  **"Why Medicine?" (100% Probability)**
+  - **Framework:** Personal motivation + intellectual interest + service commitment
+  - **Avoid:** Generic answers about "helping people"
+  - **Include:** Specific experiences that confirmed your calling
+  
+  **"Why Our School?" (100% Probability)**
+  - **Framework:** Specific programs + mission alignment + career goals fit
+  - **Research Required:** Detailed knowledge of {{school_name}} offerings
+  - **Personalize:** Connect their strengths to your specific interests
+  
+  **"Tell Me About Yourself" (90% Probability)**
+  - **Framework:** Academic journey + key experiences + future goals
+  - **Strategy:** Coherent narrative showing growth toward medicine
+  - **Length:** 2-3 minutes maximum, well-structured
+  
+  ### **🎭 {{interview_type}}-Specific Questions**
+  
+  **Scenario-Based Prompts:**
+  - **Ethical Dilemmas:** Patient confidentiality, end-of-life care, resource allocation
+  - **Teamwork Scenarios:** Conflict resolution, leadership challenges, collaboration
+  - **Problem-Solving:** Clinical reasoning, research design, community health issues
+  - **Communication Challenges:** Difficult conversations, cultural sensitivity, advocacy
+  
+  ---
+  
+  ## 🎯 **Day-of-Interview Success Strategy**
+  
+  ### **📅 Pre-Interview Preparation (Night Before)**
+  - [ ] Review all prepared stories and key talking points
+  - [ ] Research final {{school_name}} updates and news
+  - [ ] Prepare thoughtful questions to ask interviewers
+  - [ ] Plan route and timing for arrival
+  - [ ] Gather all required documents and materials
+  
+  ### **🌅 Interview Day Protocol**
+  
+  **Arrival Strategy:**
+  - Arrive 15-20 minutes early
+  - Use restroom and check appearance
+  - Review key talking points mentally
+  - Practice relaxation techniques if nervous
+  
+  **During the Interview:**
+  - **Listen Actively:** Ensure you understand each question fully
+  - **Pause and Think:** Take 2-3 seconds to organize your response
+  - **Be Conversational:** Natural dialogue, not rehearsed monologue
+  - **Stay Positive:** Even when discussing challenges or weaknesses
+  - **Ask Questions:** Show genuine interest in the program
+  
+  **Between Stations/Interviews:**
+  - **Reset Mentally:** Don't carry mistakes from one station to the next
+  - **Stay Engaged:** Continue representing yourself well
+  - **Observe:** Notice the school culture and environment
+  - **Connect:** Build genuine rapport with students and staff
+  
+  ---
+  
+  ## 📝 **Practice Schedule & Preparation Timeline**
+  
+  ### **4 Weeks Before Interview:**
+  - [ ] Complete school research and mission alignment
+  - [ ] Develop and memorize your top 5 stories
+  - [ ] Practice common questions with friends/family
+  - [ ] Research current healthcare issues and policies
+  
+  ### **2 Weeks Before Interview:**
+  - [ ] Complete mock interviews with advisors
+  - [ ] Practice {{interview_type}}-specific scenarios
+  - [ ] Prepare thoughtful questions for interviewers
+  - [ ] Plan travel and accommodation details
+  
+  ### **1 Week Before Interview:**
+  - [ ] Final review of {{school_name}} materials
+  - [ ] Practice managing {{weak_areas}} discussions
+  - [ ] Confirm all logistics and requirements
+  - [ ] Mental preparation and confidence building
+  
+  ### **Day Before Interview:**
+  - [ ] Light review of key points (avoid cramming)
+  - [ ] Relaxation and adequate sleep
+  - [ ] Final outfit and material preparation
+  - [ ] Visualization of successful interview performance
+  
+  ---
+  
+  ## ✅ **Success Metrics & Follow-Up**
+  
+  ### **Interview Performance Indicators:**
+  - [ ] Felt confident and prepared for most questions
+  - [ ] Successfully addressed concern areas constructively
+  - [ ] Made genuine connections with interviewers
+  - [ ] Demonstrated clear fit with {{school_name}} mission
+  - [ ] Left feeling authentic and true to yourself
+  
+  ### **Post-Interview Protocol:**
+  - [ ] Send thank-you notes within 24 hours
+  - [ ] Reflect on performance and areas for improvement
+  - [ ] Note any new information learned about the school
+  - [ ] Update other schools with any new experiences/achievements
+  
+  ---
+  
+  ## 🎯 **Your Interview Preparation Action Plan**
+  
+  **THIS WEEK:**
+  - [ ] Deep dive into {{school_name}} research and mission
+  - [ ] Develop your top 5 STAR method stories
+  - [ ] Practice addressing {{weak_areas}} constructively
+  - [ ] Begin {{interview_type}} format-specific preparation
+  
+  **ONGOING PREPARATION:**
+  - [ ] Daily practice with common questions
+  - [ ] Mock interviews with increasing difficulty
+  - [ ] Current events and healthcare policy review
+  - [ ] Confidence building and stress management
+  
+  ---
+  
+  ## 🌟 **Remember: You Were Invited for a Reason**
+  
+  **{{school_name}} sees potential in you** - they've already reviewed hundreds of applications and chose to invite YOU. Your job now is to:
+  
+  ✅ **Show your personality** beyond your application  
+  ✅ **Demonstrate fit** with their specific program  
+  ✅ **Prove readiness** for the challenges of medical school  
+  ✅ **Be authentic** - they want to know the real you  
+  
+  **Confidence comes from preparation.** You've got this!
+  
+  ---
+  
+  **🚀 Ready to ace your interview?** Use `personal-statement-framework` to refine your core narrative, or `school-selection-strategy` to research other target schools.
+  
+  *Interview strategy based on successful candidate experiences and admissions committee insights.*

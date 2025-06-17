@@ -1,0 +1,142 @@
+name: quick-help
+description: Quick menu to find the right prompt for your immediate need
+arguments:
+  - name: urgent_need
+    description: What you need help with right now
+    required: true
+
+template: |
+  # 🚀 **Quick Navigation - Find Your Perfect Prompt**
+  
+  ---
+  
+  ## 🎯 **You Need Help With:** 
+  ### *"{{urgent_need}}"*
+  
+  ---
+  
+  ## 📋 **Instant Prompt Directory**
+  
+  ### **🎯 PLANNING & STRATEGY**
+  
+  **`school-selection-strategy`** → *Build your strategic application list*
+  - Perfect for: Creating school lists, assessing competitiveness
+  - **Command:** `Use the school-selection-strategy prompt with my [GPA] and [MCAT]`
+  
+  **`application-timeline`** → *Month-by-month planning*
+  - Perfect for: Timeline confusion, deadline management  
+  - **Command:** `Use the application-timeline prompt with current year [junior/senior] and target cycle [2026]`
+  
+  **`mcat-strategy`** → *Comprehensive MCAT prep roadmap*
+  - Perfect for: MCAT planning, score improvement, study strategy
+  - **Command:** `Use the mcat-strategy prompt with target score [515] and available time [6 months]`
+  
+  **`gap-year-planning`** → *Strategic gap year activities*
+  - Perfect for: Gap year decisions, application strengthening
+  - **Command:** `Use the gap-year-planning prompt with weaknesses [research experience] and time [1 year]`
+  
+  ---
+  
+  ### **✍️ WRITING & APPLICATIONS**
+  
+  **`personal-statement-framework`** → *Compelling personal narrative*
+  - Perfect for: Personal statement drafting, story structure
+  - **Command:** `Use the personal-statement-framework prompt with motivation [your story]`
+  
+  **`activity-description-optimizer`** → *Transform experiences into stories*
+  - Perfect for: AMCAS descriptions, making activities memorable
+  - **Command:** `Use the activity-description-optimizer prompt with activity type [clinical] and description [your current text]`
+  
+  **`interview-prep`** → *Master any interview format*
+  - Perfect for: Interview anxiety, MMI preparation, practice
+  - **Command:** `Use the interview-prep prompt with interview type [MMI] and school [University Name]`
+  
+  ---
+  
+  ### **🚨 PROBLEM SOLVING**
+  
+  **`low-stats-strategy`** → *Maximize chances with lower stats*
+  - Perfect for: GPA/MCAT concerns, strategic compensation
+  - **Command:** `Use the low-stats-strategy prompt with GPA [3.4] and MCAT [505]`
+  
+  **`recommend-next-steps`** → *Get AI-powered recommendations*
+  - Perfect for: Feeling overwhelmed, need guidance prioritization
+  - **Command:** `Use the recommend-next-steps prompt with main concerns [your biggest worry]`
+  
+  ---
+  
+  ### **🔧 INSTANT TOOLS**
+  
+  **`find-relevant-guidance`** → *Search for specific advice*
+  - Perfect for: Quick questions, targeted help
+  - **Command:** `Find guidance relevant to [specific topic]`
+  
+  **`school-matcher`** → *Match schools to your profile*
+  - Perfect for: School research, fit assessment  
+  - **Command:** `Use school-matcher with GPA [3.7], MCAT [512], and state [California]`
+  
+  **`welcome`** → *Full menu and orientation*
+  - Perfect for: Starting fresh, seeing all options
+  - **Command:** `Use the welcome prompt`
+  
+  ---
+  
+  ## 🎯 **Based on "{{urgent_need}}" - My Recommendation:**
+  
+  ### **🚀 START HERE:**
+  
+  **If you mentioned stats/GPA/MCAT concerns:**
+  → `low-stats-strategy` or `school-selection-strategy`
+  
+  **If you mentioned timeline/planning:**
+  → `application-timeline` or `recommend-next-steps`
+  
+  **If you mentioned writing/essays:**
+  → `personal-statement-framework` or `activity-description-optimizer`
+  
+  **If you mentioned interviews:**
+  → `interview-prep`
+  
+  **If you mentioned MCAT:**
+  → `mcat-strategy`
+  
+  **If you're feeling overwhelmed:**
+  → `recommend-next-steps` or `welcome`
+  
+  ---
+  
+  ## 💡 **Pro Tips for Maximum Impact**
+  
+  **🎯 Be Specific in Your Prompts:**
+  - Include your actual GPA, MCAT, state, timeline
+  - The more context you provide, the better the guidance
+  
+  **🔄 Chain Your Prompts:**
+  - Use results from one prompt to inform the next
+  - Build a comprehensive strategy step by step
+  
+  **📋 Track Your Progress:**
+  - Note which prompts you've completed
+  - Return to `recommend-next-steps` for updated guidance
+  
+  ---
+  
+  ## ✅ **Ready to Take Action?**
+  
+  **Copy this command and customize with your info:**
+  
+  ```
+  Use the [recommended-prompt-name] prompt with [your specific details]
+  ```
+  
+  **Or start with the basics:**
+  
+  ```
+  Use the welcome prompt with student_name [Your Name] and current_stage [sophomore/junior/senior/gap year]
+  ```
+  
+  ---
+  
+  **🎯 Remember:** Every successful pre-med journey starts with one focused action. Choose your prompt and let's get you moving toward medical school!
+  
+  *Quick navigation based on common student needs and optimal guidance sequences.*

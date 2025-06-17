@@ -1,0 +1,281 @@
+name: gap-year-planning
+description: Plan a productive gap year to strengthen your application
+arguments:
+  - name: current_weaknesses
+    description: Areas of your application that need strengthening
+    required: true
+  - name: available_time
+    description: How much time you have for gap year activities
+    required: true
+  - name: financial_constraints
+    description: Any financial limitations for gap year activities
+    required: false
+
+template: |
+  # 🚀 **Strategic Gap Year Planning: Transform Challenges Into Strengths**
+  
+  ---
+  
+  ## 📊 **Your Gap Year Profile**
+  
+  **Application Areas to Strengthen:** {{current_weaknesses}}
+  
+  **Available Timeline:** {{available_time}}
+  
+  **Financial Considerations:** {{financial_constraints || "No major financial limitations specified"}}
+  
+  ---
+  
+  ## 🎯 **Gap Year Success Framework**
+  
+  ### **💡 Mindset Shift: From "Gap" to "Growth" Year**
+  
+  A strategic gap year isn't a delay—it's an investment in becoming a stronger candidate and future physician. Many successful medical students used gap years to build exceptional profiles.
+  
+  **Your Mission:** Transform {{current_weaknesses}} into competitive advantages while gaining valuable life experience.
+  
+  ---
+  
+  ## 📋 **Strategic Activity Prioritization**
+  
+  ### **🏥 Clinical Experience (High Impact)**
+  
+  **If Weakness = Limited Patient Contact:**
+  - **Medical Scribe:** Direct physician shadowing + healthcare system exposure
+  - **CNA/Medical Assistant:** Hands-on patient care experience
+  - **EMT Certification:** Emergency medicine exposure + valuable skills
+  - **Clinical Research Coordinator:** Bridge research and clinical care
+  
+  **If Weakness = Depth of Experience:**
+  - **Full-time clinical role:** 40+ hours/week for meaningful impact
+  - **Leadership in current role:** Train new volunteers, lead initiatives
+  - **Specialty exposure:** Rotate through different clinical areas
+  
+  ### **🔬 Research Excellence (Medium-High Impact)**
+  
+  **If Weakness = No Research Experience:**
+  - **Research Assistant:** Full-time lab position for deep immersion
+  - **Clinical Research:** Patient-oriented research for dual benefit
+  - **Independent Project:** Develop your own research question
+  
+  **If Weakness = Research Depth:**
+  - **Publication Push:** Complete ongoing projects for publication
+  - **Conference Presentations:** Present work at regional/national meetings
+  - **Grant Writing:** Apply for small research grants
+  - **Mentorship Role:** Train newer research students
+  
+  ### **💪 Academic Enhancement (High Impact if GPA/MCAT Issue)**
+  
+  **If Weakness = Low GPA:**
+  - **Post-Baccalaureate Program:** Formal academic enhancement
+  - **Graduate Coursework:** Master's-level science courses
+  - **Additional Prerequisites:** Retake courses with better grades
+  
+  **If Weakness = MCAT Score:**
+  - **Intensive MCAT Prep:** 3-6 months focused preparation
+  - **Content Mastery:** Address specific section weaknesses
+  - **Test-Taking Skills:** Multiple practice tests and strategy work
+  
+  ### **🌍 Leadership & Service (Medium Impact)**
+  
+  **If Weakness = Leadership Experience:**
+  - **AmeriCorps/Peace Corps:** Major service commitment
+  - **Non-profit Leadership:** Board positions or program management
+  - **Community Health Programs:** Develop health education initiatives
+  
+  **If Weakness = Service Depth:**
+  - **Long-term Commitment:** Deep engagement with specific cause
+  - **Service Trip Leadership:** Organize and lead medical mission trips
+  - **Advocacy Work:** Health policy or public health initiatives
+  
+  ---
+  
+  ## 📅 **Strategic Timeline Development**
+  
+  ### **Phase 1: Foundation Building** *(Months 1-3)*
+  
+  **Primary Goals:**
+  - Secure main gap year position (clinical/research role)
+  - Begin addressing biggest weakness identified
+  - Establish routine and productivity habits
+  - Start building new professional relationships
+  
+  **Key Activities:**
+  - [ ] Start primary gap year activity
+  - [ ] Set up progress tracking systems
+  - [ ] Connect with mentors in new role
+  - [ ] Begin documentation of experiences
+  
+  ### **Phase 2: Skill Development** *(Months 4-8)*
+  
+  **Primary Goals:**
+  - Deepen expertise in chosen gap year activities
+  - Add complementary experiences to round out profile
+  - Seek increasing responsibility and leadership
+  - Build relationships for future recommendation letters
+  
+  **Key Activities:**
+  - [ ] Take on leadership roles in current positions
+  - [ ] Add secondary activities addressing other weaknesses
+  - [ ] Begin networking in medical community
+  - [ ] Document specific accomplishments and growth
+  
+  ### **Phase 3: Application Preparation** *(Months 9-12)*
+  
+  **Primary Goals:**
+  - Leverage gap year experiences for strong application
+  - Secure outstanding letters of recommendation
+  - Demonstrate sustained commitment and growth
+  - Prepare compelling narratives about your journey
+  
+  **Key Activities:**
+  - [ ] Request letters of recommendation from gap year supervisors
+  - [ ] Document quantifiable impacts of your work
+  - [ ] Prepare application materials highlighting growth
+  - [ ] Plan continuation of activities during application cycle
+  
+  ---
+  
+  ## 💰 **Financial Strategy Planning**
+  
+  ### **Budget-Conscious High-Impact Options**
+  
+  **Paid Clinical Positions:**
+  - Medical scribe ($15-20/hour)
+  - CNA/Medical assistant ($16-22/hour)
+  - Clinical research coordinator ($18-25/hour)
+  - EMT/Paramedic ($18-30/hour)
+  
+  **Funded Service Programs:**
+  - AmeriCorps (living stipend + education award)
+  - Peace Corps (living stipend + benefits)
+  - Teach for America (teacher salary)
+  - City Year (modest stipend)
+  
+  **Graduate School with Funding:**
+  - Research assistantships with tuition waiver
+  - Teaching assistantships in science departments
+  - Fellowship programs for research experience
+  
+  ### **Cost-Benefit Analysis**
+  
+  **High Cost, High Reward:**
+  - Formal post-bac programs ($15,000-40,000)
+  - International medical volunteering ($3,000-10,000)
+  - Advanced certifications/training ($1,000-5,000)
+  
+  **Low Cost, High Impact:**
+  - Local clinical volunteering (free)
+  - Research assistant positions (often paid)
+  - Community health initiatives (minimal cost)
+  - Online course certifications ($100-500)
+  
+  ---
+  
+  ## ⚠️ **Common Pitfalls to Avoid**
+  
+  ### **🚨 Red Flags for Admissions Committees**
+  
+  **Avoid These Mistakes:**
+  - Taking gap year to "travel and find yourself" without medical relevance
+  - Completely stepping away from pre-med activities
+  - Job-hopping without demonstrating commitment
+  - Using gap year as extended vacation
+  - Failing to document and reflect on experiences
+  
+  ### **✅ Success Indicators**
+  
+  **Admissions Committees Love:**
+  - Clear purpose and strategic planning
+  - Sustained commitment to chosen activities
+  - Measurable impact and growth
+  - Strong reflection and learning
+  - Continued engagement with medicine
+  
+  ---
+  
+  ## 📈 **Progress Tracking & Success Metrics**
+  
+  ### **Monthly Check-ins:**
+  - [ ] Am I addressing my identified weaknesses?
+  - [ ] What specific skills/experiences am I gaining?
+  - [ ] How am I documenting my growth and impact?
+  - [ ] What relationships am I building for recommendations?
+  
+  ### **Quarterly Assessments:**
+  - [ ] Quantifiable achievements in current role
+  - [ ] New skills and competencies developed
+  - [ ] Professional relationships and mentorship gained
+  - [ ] Application story becoming stronger
+  
+  ### **End-of-Year Evaluation:**
+  - [ ] Weakness areas significantly improved
+  - [ ] Strong recommendation letters secured
+  - [ ] Compelling application narrative developed
+  - [ ] Increased confidence and readiness for medical school
+  
+  ---
+  
+  ## 🎯 **Staying Competitive During Gap Year**
+  
+  ### **Maintain Medical School Readiness**
+  - Stay current with medical news and developments
+  - Continue shadowing physicians when possible
+  - Attend pre-med society meetings or medical conferences
+  - Keep up with science through journals or courses
+  
+  ### **Build Professional Network**
+  - Connect with physicians in your gap year workplace
+  - Attend medical school information sessions
+  - Join professional organizations related to your interests
+  - Maintain relationships with undergraduate mentors
+  
+  ### **Document Everything**
+  - Keep detailed records of experiences and reflections
+  - Save examples of your work and accomplishments
+  - Track hours and quantify your impact
+  - Prepare stories for interviews and applications
+  
+  ---
+  
+  ## ✅ **Your Gap Year Action Plan**
+  
+  ### **IMMEDIATE (This Month):**
+  - [ ] Research and apply for primary gap year position
+  - [ ] Create budget and financial plan
+  - [ ] Set up systems for tracking progress and experiences
+  - [ ] Connect with advisors about gap year strategy
+  
+  ### **SHORT-TERM (Next 3 Months):**
+  - [ ] Begin primary gap year activity
+  - [ ] Establish routines and goals
+  - [ ] Start addressing identified weaknesses
+  - [ ] Build relationships with supervisors and colleagues
+  
+  ### **ONGOING THROUGHOUT THE YEAR:**
+  - [ ] Regular progress assessments and adjustments
+  - [ ] Continuous documentation of growth and impact
+  - [ ] Professional development and skill building
+  - [ ] Preparation for medical school application
+  
+  ---
+  
+  ## 🌟 **Remember: Gap Years Often Create Stronger Candidates**
+  
+  **Statistics Show:**
+  - Many successful medical students took gap years
+  - Gap year experiences often become highlights of applications
+  - Additional life experience enhances maturity and perspective
+  - Career exploration can strengthen your commitment to medicine
+  
+  **Your Advantage:**
+  - More life experience than traditional students
+  - Stronger work ethic and time management skills
+  - Clearer understanding of healthcare and medicine
+  - Compelling story of growth and determination
+  
+  ---
+  
+  **🚀 Ready to make your gap year transformative?** Use `low-stats-strategy` if addressing academic concerns, or `activity-description-optimizer` to craft compelling narratives about your experiences.
+  
+  *Strategy based on successful gap year student outcomes and admissions committee preferences.*

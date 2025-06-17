@@ -1,0 +1,154 @@
+name: mcat-strategy
+description: Create a comprehensive MCAT preparation strategy tailored to your timeline and target score
+arguments:
+  - name: target_score
+    description: Your MCAT target score (e.g., 515)
+    required: true
+  - name: current_knowledge_level
+    description: Your current preparation level (haven't started, some studying, diagnostic score)
+    required: true
+  - name: available_time
+    description: How much time you have to study (e.g., 4 months, 6 months)
+    required: true
+  - name: study_constraints
+    description: Any limitations (working, school, family commitments)
+    required: false
+  - name: previous_attempts
+    description: Previous MCAT attempts and scores
+    required: false
+
+template: |
+  # 📚 **Your Personalized MCAT Domination Strategy**
+  
+  ---
+  
+  ## 🎯 **MCAT Profile Assessment**
+  
+  **Target Performance:**
+  - **Goal Score:** {{target_score}}
+  - **Current Level:** {{current_knowledge_level}}
+  - **Preparation Time:** {{available_time}}
+  - **Study Constraints:** {{study_constraints || "No major limitations"}}
+  - **Previous Attempts:** {{previous_attempts || "First attempt"}}
+  
+  ---
+  
+  ## 📊 **Reality Check & Goal Analysis**
+  
+  ### **🎯 Score Feasibility Assessment**
+  - **Target Score Analysis:** Is {{target_score}} realistic given your {{available_time}} timeline?
+  - **Percentile Breakdown:** What {{target_score}} means for your competitiveness
+  - **School Alignment:** How this score fits your target medical schools
+  - **Risk Assessment:** Backup plans and contingencies
+  
+  ### **📈 Section Score Targets**
+  - **C/P (Chemistry/Physics):** [Target range]
+  - **CARS (Critical Analysis):** [Target range]  
+  - **B/B (Biology/Biochemistry):** [Target range]
+  - **P/S (Psychology/Sociology):** [Target range]
+  
+  ---
+  
+  ## 📅 **Strategic Study Timeline**
+  
+  ### **Phase 1: Foundation Building** *(Weeks 1-X)*
+  - **Content Review:** High-yield topics and knowledge gaps
+  - **Resource Selection:** Optimal prep materials for your learning style
+  - **Study Schedule:** Weekly breakdown accommodating your constraints
+  
+  ### **Phase 2: Skill Development** *(Weeks X-Y)*
+  - **Practice Integration:** Mixing content review with practice problems
+  - **Weak Area Focus:** Targeted improvement in struggling sections
+  - **Timing Strategies:** Building speed and accuracy
+  
+  ### **Phase 3: Test Mastery** *(Final Weeks)*
+  - **Full-Length Practice:** Realistic test simulations
+  - **Score Analysis:** Data-driven improvement targeting
+  - **Final Review:** High-yield cramming and confidence building
+  
+  ---
+  
+  ## 🎯 **Section-Specific Battle Plans**
+  
+  ### **🧪 C/P (Chemistry/Physics)**
+  - **High-Yield Topics:** [Prioritized content areas]
+  - **Formula Mastery:** Key equations and applications
+  - **Problem-Solving Strategy:** Systematic approach to complex calculations
+  
+  ### **📖 CARS (Critical Analysis)**
+  - **Reading Strategy:** Active reading and annotation techniques
+  - **Question Types:** Mastering main idea, inference, and reasoning questions
+  - **Timing Mastery:** Optimal pacing for passages and questions
+  
+  ### **🧬 B/B (Biology/Biochemistry)**
+  - **Pathway Mastery:** Key metabolic and cellular processes
+  - **Experimental Analysis:** Data interpretation and experimental design
+  - **Integration Skills:** Connecting concepts across biological systems
+  
+  ### **🧠 P/S (Psychology/Sociology)**
+  - **Terminology Mastery:** High-yield terms and concepts
+  - **Theory Application:** Using psychological principles in contexts
+  - **Research Analysis:** Understanding study designs and conclusions
+  
+  ---
+  
+  ## 📚 **Resource Optimization**
+  
+  ### **Primary Materials:**
+  - **Content Review:** [Recommended books/courses for your situation]
+  - **Practice Questions:** [Best question banks and practice tests]
+  - **Supplementary Tools:** [Additional resources for weak areas]
+  
+  ### **Budget-Conscious Options:**
+  - **Free Resources:** AAMC materials and Khan Academy
+  - **Cost-Effective Choices:** Maximum value prep options
+  - **Investment Priorities:** Where to spend money for biggest impact
+  
+  ---
+  
+  ## ⚠️ **Critical Decision Points**
+  
+  ### **🚨 Red Flags - Consider Postponing If:**
+  - Practice scores consistently 15+ points below target
+  - Major life events disrupting study schedule
+  - Content gaps requiring more foundation work
+  
+  ### **✅ Green Lights - You're on Track If:**
+  - Practice scores within 10 points of target
+  - Consistent improvement across all sections
+  - Confident in test-day performance
+  
+  ---
+  
+  ## 📈 **Success Metrics & Checkpoints**
+  
+  **Weekly Progress Tracking:**
+  - [ ] Content review milestones met
+  - [ ] Practice question accuracy improving
+  - [ ] Full-length test scores trending upward
+  - [ ] Weak areas showing improvement
+  
+  **Decision Points:**
+  - **Week X:** First full-length assessment
+  - **Week Y:** Go/no-go decision for test date
+  - **Week Z:** Final preparation and confidence check
+  
+  ---
+  
+  ## 🎯 **Next Action Steps**
+  
+  **THIS WEEK:**
+  - [ ] Finalize study materials and resources
+  - [ ] Create detailed daily study schedule
+  - [ ] Take diagnostic practice test for baseline
+  
+  **NEXT STEPS:**
+  - [ ] Begin systematic content review
+  - [ ] Set up progress tracking system
+  - [ ] Schedule regular practice test dates
+  
+  ---
+  
+  **🚀 Ready to crush the MCAT?** Use `application-timeline` to coordinate with your application schedule, or `find-relevant-guidance` for specific study strategies.
+  
+  *Strategy based on proven MCAT preparation methods and score improvement data.*
